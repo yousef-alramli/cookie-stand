@@ -1,181 +1,239 @@
 "use strict";
 
-let score = 0
+let seattle = {
+    min: 23,
+    max: 65,
+    avgcookie: 6.3,
+    randomcustomer: [],
+    randomcookie: [],
+    hourslist: ['6am','7am','8am','9am','10am','11am','12am','1pm','2pm','3pm','4pm','5pm','6pm','7pm'],
+    randomnum: function () {
+        for (let i = 0; i < 14; i++) {
+            function random(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
 
-let name = prompt ('whts your name')
+            }
 
-
-alert ('hello and welcome '+name + ', thank you for taking this guess game')
-alert ('Please answer yes or no only')
-function question1(){
-let favcolor=prompt ( 'black is my favorite color ')
-
-favcolor=favcolor.toLowerCase()
-
-switch(favcolor){
-case'yes':
-alert ('incorrect answer ');
-
-
-break;
-case'no':
-alert('thats correct');
-score++;
-break;
-default:
-    alert('pleas answer whit yes or no only')
-
-}
-}
-question1()
-
-function question2(){
-
-let favsport=prompt ( 'soccer is my favorite sport')
-
-favsport=favsport.toLowerCase()
-
-switch(favsport){
-case'yes':
-alert ('thats correct');
-score++;
-break;
-case'no':
-alert('incorrect answer');
-break;
-default:
-    alert('pleas answer whith yes or no only')
-
-}
-}
-question2()
-function question3(){
-let uni=prompt ( 'I graduated from University of Jordan')
-
-uni=uni.toLowerCase()
-
-switch(uni){
-case'yes':
-alert ('thats correct');
-score++;
-break;
-case'no':
-alert('incorrect answer');
-break;
-default:
-    alert('pleas answer whith yes or no only')
-
-}
-}
- question3()
-
-
- function question4(){
-let favpit=prompt ( 'pony is my favorite pet')
-
-favpit=favpit.toLowerCase()
-
-switch(favpit){
-case'yes':
-alert ('thats way too wrong');
-score++;
-break;
-case'no':
-alert('its obviously correct');
-score++;
-break;
-default:
-    alert('pleas answer whith yes or no only')
-
-}
- }
-  question4()
-
-  function question5(){
-let favtv=prompt ( 'my favorite tv show is Friends')
-
-favtv=favtv.toLowerCase()
-
-switch(favtv){
-case'yes':
-alert ('yup thats correct, and it should be your favorite too :P ');
-score++;
-break;
-case'no':
-alert('obviously incorrect answer -_- ');
-break;
-default:
-    alert('pleas answer whith yes or no only')
-
-}
-  }
-   question5()
-
-   
-alert('you have 4 attempts for the next question')
-function question6(){
-let correctAnswer = false;
-
-for (let i = 0; i < 4; i++) {
-
-    let num = prompt("guess a number between 1 to 10");
- if (num > 3) {
-
-    alert("too high");
-
-}
-else if (num < 3) {
-
-    alert("too low");
-
-}
-
-else if (num == 3) {
-    alert ('correct');
-    correctAnswer = true;
-    score++;
-    break;
-}    
-else{
-    alert('please write numbers') 
-}
-}
-if (!correctAnswer) {
-   alert('the correct answer is 3') ;
-}
-}
-question6()
-
-
-alert('you have 6 attempts for the next question')
-function question7(){
-let suit = ['tie', 'shirt', 'jacket', 'pants']
-
-let correctSuit = false;
-
-for (let j = 0; j < 6; j++) {
-    let suitpices = prompt('the suit have 4 pices, name one of them')
-
-    suitpices=suitpices.toLowerCase()
-    
-    for (let i = 0; i < 4; i++) {
-        if(suitpices == suit[i]) {
-            correctSuit = true;
-            alert("thats correct");
-            score++;
-            break;
+            this.randomcustomer.push(random(this.min, this.max));
+            this.randomcookie.push(Math.round(this.avgcookie * this.randomcustomer[i]));
         }
+        
+
+        let parent = document.getElementById('salmon');
+        let h2element = document.createElement('h2');
+        let divelement = document.createElement('div');
+        let ulelement = document.createElement('ul');
+        parent.appendChild(h2element);
+        parent.appendChild(divelement);
+        
+        divelement.appendChild(ulelement);
+        h2element.textContent='Seattle';
+        for (let i = 0; i < 14; i++) {
+
+            let lielement = document.createElement('li')
+            lielement.textContent = `${this.hourslist[i]} ${this.randomcookie[i]}`
+            ulelement.appendChild(lielement)
+        }
+
+      
+        
     }
-    if(!correctSuit) {
-        alert("incorrect answer try again");
-    } else {
-        break;
-    }
+
 }
 
-if (!correctSuit) {
-    alert("the right answers are tie, shirt, jacket and pants");
+
+
+seattle.randomnum()
+
+
+let Tokyo = {
+    min: 3,
+    max: 24,
+    avgcookie: 1.2,
+    randomcustomer: [],
+    randomcookie: [],
+    hourslist: ['6am','7am','8am','9am','10am','11am','12am','1pm','2pm','3pm','4pm','5pm','6pm','7pm'],
+    randomnum: function () {
+        for (let i = 0; i < 14; i++) {
+            function random(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+
+            }
+
+            this.randomcustomer.push(random(this.min, this.max));
+            this.randomcookie.push(Math.round(this.avgcookie * this.randomcustomer[i]));
+        }
+
+
+        
+        
+        let parent = document.getElementById('salmon');
+        let h2element = document.createElement('h2');
+        let divelement = document.createElement('div');
+        let ulelement = document.createElement('ul');
+        parent.appendChild(h2element);
+        parent.appendChild(divelement);
+        
+        divelement.appendChild(ulelement);
+        h2element.textContent='Tokyo';
+        for (let i = 0; i < 14; i++) {
+
+            let lielement = document.createElement('li')
+            lielement.textContent = `${this.hourslist[i]} ${this.randomcookie[i]}`
+            ulelement.appendChild(lielement)
+        }
+
+      
+        
+    }
+
 }
+
+Tokyo.randomnum()
+
+
+
+
+let Dubai = {
+    min: 11,
+    max: 38,
+    avgcookie: 3.7,
+    randomcustomer: [],
+    randomcookie: [],
+    hourslist: ['6am','7am','8am','9am','10am','11am','12am','1pm','2pm','3pm','4pm','5pm','6pm','7pm'],
+    randomnum: function () {
+        for (let i = 0; i < 14; i++) {
+            function random(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+
+            }
+
+            this.randomcustomer.push(random(this.min, this.max));
+            this.randomcookie.push(Math.round(this.avgcookie * this.randomcustomer[i]));
+        }
+
+
+        
+        
+        let parent = document.getElementById('salmon');
+        let h2element = document.createElement('h2');
+        let divelement = document.createElement('div');
+        let ulelement = document.createElement('ul');
+        parent.appendChild(h2element);
+        parent.appendChild(divelement);
+        
+        divelement.appendChild(ulelement);
+        h2element.textContent='Dubai';
+        for (let i = 0; i < 14; i++) {
+
+            let lielement = document.createElement('li')
+            lielement.textContent = `${this.hourslist[i]} ${this.randomcookie[i]}`
+            ulelement.appendChild(lielement)
+        }
+
+      
+        
+    }
+
 }
- question7()
- alert('your score is ' + score + ' /7')
+
+Dubai.randomnum()
+
+
+let Paris = {
+    min: 20,
+    max: 38,
+    avgcookie: 2.3,
+    randomcustomer: [],
+    randomcookie: [],
+    hourslist: ['6am','7am','8am','9am','10am','11am','12am','1pm','2pm','3pm','4pm','5pm','6pm','7pm'],
+    randomnum: function () {
+        for (let i = 0; i < 14; i++) {
+            function random(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+
+            }
+
+            this.randomcustomer.push(random(this.min, this.max));
+            this.randomcookie.push(Math.round(this.avgcookie * this.randomcustomer[i]));
+        }
+
+
+        
+        console.log(this.randomcustomer);
+        console.log(this.randomcookie);
+        let parent = document.getElementById('salmon');
+        let h2element = document.createElement('h2');
+        let divelement = document.createElement('div');
+        let ulelement = document.createElement('ul');
+        parent.appendChild(h2element);
+        parent.appendChild(divelement);
+        
+        divelement.appendChild(ulelement);
+        h2element.textContent='Paris';
+        for (let i = 0; i < 14; i++) {
+
+            let lielement = document.createElement('li')
+            lielement.textContent = `${this.hourslist[i]} ${this.randomcookie[i]}`
+            ulelement.appendChild(lielement)
+        }
+
+      
+        
+    }
+
+}
+
+Paris.randomnum()
+
+
+let Lima = {
+    min: 20,
+    max: 38,
+    avgcookie: 2.3,
+    randomcustomer: [],
+    randomcookie: [],
+    hourslist: ['6am','7am','8am','9am','10am','11am','12am','1pm','2pm','3pm','4pm','5pm','6pm','7pm'],
+    randomnum: function () {
+        for (let i = 0; i < 14; i++) {
+            function random(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+
+            }
+
+            this.randomcustomer.push(random(this.min, this.max));
+            this.randomcookie.push(Math.round(this.avgcookie * this.randomcustomer[i]));
+        }
+
+
+        
+        console.log(this.randomcustomer);
+        console.log(this.randomcookie);
+        let parent = document.getElementById('salmon');
+        let h2element = document.createElement('h2');
+        let divelement = document.createElement('div');
+        let ulelement = document.createElement('ul');
+        parent.appendChild(h2element);
+        parent.appendChild(divelement);
+        
+        divelement.appendChild(ulelement);
+
+        h2element.textContent='Lima';
+        
+        for (let i = 0; i < 14; i++) {
+
+            let lielement = document.createElement('li')
+            lielement.textContent = `${this.hourslist[i]} ${this.randomcookie[i]}`
+            ulelement.appendChild(lielement)
+        }
+
+      
+        
+    }
+
+}
+
+Lima.randomnum()
+
+
+
