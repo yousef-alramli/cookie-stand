@@ -34,9 +34,14 @@ let seattle = {
             lielement.textContent = `${this.hourslist[i]} ${this.randomcookie[i]}`
             ulelement.appendChild(lielement)
         }
-
-      
-        
+let litotal = document.createElement('li');
+      ulelement.appendChild(litotal);
+      let sum = 0;
+       
+      for (let i = 0; i < this.randomcookie.length; i++) {
+           sum +=this.randomcookie[i]; 
+        };
+           litotal.textContent= `total ${sum}`
     }
 
 }
@@ -83,7 +88,14 @@ let Tokyo = {
             ulelement.appendChild(lielement)
         }
 
-      
+        let litotal = document.createElement('li');
+        ulelement.appendChild(litotal);
+        let sum = 0;
+         
+        for (let i = 0; i < this.randomcookie.length; i++) {
+             sum +=this.randomcookie[i]; 
+          };
+             litotal.textContent= `total ${sum}`
         
     }
 
@@ -130,7 +142,14 @@ let Dubai = {
             lielement.textContent = `${this.hourslist[i]} ${this.randomcookie[i]}`
             ulelement.appendChild(lielement)
         }
-
+        let litotal = document.createElement('li');
+        ulelement.appendChild(litotal);
+        let sum = 0;
+         
+        for (let i = 0; i < this.randomcookie.length; i++) {
+             sum +=this.randomcookie[i]; 
+          };
+             litotal.textContent= `total ${sum}`
       
         
     }
@@ -160,8 +179,7 @@ let Paris = {
 
 
         
-        console.log(this.randomcustomer);
-        console.log(this.randomcookie);
+       
         let parent = document.getElementById('salmon');
         let h2element = document.createElement('h2');
         let divelement = document.createElement('div');
@@ -178,7 +196,14 @@ let Paris = {
             ulelement.appendChild(lielement)
         }
 
-      
+        let litotal = document.createElement('li');
+        ulelement.appendChild(litotal);
+        let sum = 0;
+         
+        for (let i = 0; i < this.randomcookie.length; i++) {
+             sum +=this.randomcookie[i]; 
+          };
+             litotal.textContent= `total ${sum}`
         
     }
 
@@ -207,8 +232,7 @@ let Lima = {
 
 
         
-        console.log(this.randomcustomer);
-        console.log(this.randomcookie);
+       
         let parent = document.getElementById('salmon');
         let h2element = document.createElement('h2');
         let divelement = document.createElement('div');
@@ -227,7 +251,14 @@ let Lima = {
             ulelement.appendChild(lielement)
         }
 
-      
+        let litotal = document.createElement('li');
+        ulelement.appendChild(litotal);
+        let sum = 0;
+         
+        for (let i = 0; i < this.randomcookie.length; i++) {
+             sum +=this.randomcookie[i]; 
+          };
+             litotal.textContent= `total ${sum}`
         
     }
 
