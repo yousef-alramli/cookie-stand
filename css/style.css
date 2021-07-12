@@ -1,16 +1,16 @@
 
-body {
-    color: aliceblue;
-    background-color: black;
-    
+table *{
+border: 1px solid darkblue;
+border-collapse: collapse;
+}
 
-}
-.Yousef {
-    color: rgb(201, 32, 32);
-background-color: rgb(1, 1, 48);
-padding: 50px;
-text-align: center;
-width: 50
-%;
-position: fixed;
-}
+
+
+
+
+
+
+
+
+
+
