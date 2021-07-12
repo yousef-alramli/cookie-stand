@@ -413,7 +413,7 @@ function footer() {
     table.appendChild(trfooter)
     let thfooter = document.createElement('th');
     trfooter.appendChild(thfooter);
-    thfooter.textContent = ''
+    thfooter.textContent = 'total'
     for (let i = 0; i < hourslist.length; i++) {
         thfooter = document.createElement('th');
         trfooter.appendChild(thfooter);
