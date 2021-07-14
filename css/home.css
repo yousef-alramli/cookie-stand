@@ -1,0 +1,26 @@
+#a {
+background-color: rgb(0, 0, 66) ;
+height: 30px;
+width: 50px;
+padding-left: 10px;
+margin-top: 10px;
+
+
+}
+
+#a:hover *,#a:hover{
+background-color: gold;
+color: rgb(0, 0, 66) ;
+}
+
+a{
+    text-decoration: none;
+color: gold;
+}
+
+body{
+    margin: 0px;
+background-color: black;
+color: blanchedalmond;
+font-style: initial;
+}
