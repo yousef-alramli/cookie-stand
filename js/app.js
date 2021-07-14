@@ -322,6 +322,7 @@ thhead.textContent = ''
 
 function header() {
 
+
     for (let i = 0; i < hourslist.length; i++) {
         let thhead = document.createElement('th');
         trhead.appendChild(thhead);
@@ -340,7 +341,7 @@ header();
 let trbody = document.createElement('tr')
 table.appendChild(trbody)
 
-let listoflocationtotal= [];
+let listoflocationtotal = [];
 
 Salmoncookie.prototype.render = function () {
 
@@ -371,10 +372,10 @@ Salmoncookie.prototype.render = function () {
     for (let j = 0; j < this.randomcookie.length; j++) {
 
         locationtotal += this.randomcookie[j]
-        listoflocationtotal.push(locationtotal)
+
 
     }
-    
+
 
     thbody = document.createElement('th');
     trbody.appendChild(thbody);
@@ -391,14 +392,14 @@ for (let y = 0; y < listofbranches.length; y++) {
 
 let totalcolumn = [];
 let hourlytotal = 0;
-
+let totaloftotal = 0;
 for (let j = 0; j < hourslist.length; j++) {
 
     hourlytotal = 0
 
     for (var i = 0; i < listofbranches.length; i++) {
         hourlytotal += listofbranches[i].randomcookie[j];
-
+        totaloftotal += listofbranches[i].randomcookie[j];
     }
 
     totalcolumn.push(hourlytotal)
@@ -407,9 +408,13 @@ for (let j = 0; j < hourslist.length; j++) {
 
 
 
+
+let trfooter = document.createElement('tr')
+
+
 function footer() {
 
-    let trfooter = document.createElement('tr')
+    
     table.appendChild(trfooter)
     let thfooter = document.createElement('th');
     trfooter.appendChild(thfooter);
@@ -421,16 +426,40 @@ function footer() {
 
     }
 
-    let totaloftotal = 0;
-    for (let j = 0; j < listofbranches.length; j++) {
-        totaloftotal += listoflocationtotal[j];
-    }
+
+
 
     thfooter = document.createElement('th');
     trfooter.appendChild(thfooter);
-    thfooter.textContent = totaloftotal
+    thfooter.textContent = totaloftotal;
 
 }
+footer();
+
+
+
+let form = document.getElementById('form')
+form.addEventListener('submit', addnew)
+
+function addnew(event) {
+
+    event.preventDefault();
+
+    let name = event.target.namefield.value;
+    let max = event.target.maxfield.value;
+    let min = event.target.minfield.value;
+    let avg = event.target.avgfield.value;
+    min = parseInt(min);
+    max = parseInt(max);
+    avg = parseInt(avg);
+
+    let addedcookie = new Salmoncookie(name, min, max, avg)
+
+
+    addedcookie.render();
+
+   trfooter.textContent='';
 
 footer();
+}
 
