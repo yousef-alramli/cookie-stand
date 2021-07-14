@@ -390,21 +390,7 @@ for (let y = 0; y < listofbranches.length; y++) {
 }
 
 
-let totalcolumn = [];
-let hourlytotal = 0;
-let totaloftotal = 0;
-for (let j = 0; j < hourslist.length; j++) {
 
-    hourlytotal = 0
-
-    for (var i = 0; i < listofbranches.length; i++) {
-        hourlytotal += listofbranches[i].randomcookie[j];
-        totaloftotal += listofbranches[i].randomcookie[j];
-    }
-
-    totalcolumn.push(hourlytotal)
-
-}
 
 
 
@@ -413,6 +399,23 @@ let trfooter = document.createElement('tr')
 
 
 function footer() {
+
+
+    let totalcolumn = [];
+    let hourlytotal = 0;
+    let totaloftotal = 0;
+    for (let j = 0; j < hourslist.length; j++) {
+    
+        hourlytotal = 0
+    
+        for (var i = 0; i < listofbranches.length; i++) {
+            hourlytotal += listofbranches[i].randomcookie[j];
+            totaloftotal += listofbranches[i].randomcookie[j];
+        }
+    
+        totalcolumn.push(hourlytotal)
+    
+    }
 
     
     table.appendChild(trfooter)
@@ -452,14 +455,21 @@ function addnew(event) {
     min = parseInt(min);
     max = parseInt(max);
     avg = parseInt(avg);
-
+    
     let addedcookie = new Salmoncookie(name, min, max, avg)
 
+    console.log(addedcookie);
 
     addedcookie.render();
 
    trfooter.textContent='';
 
-footer();
+
+   trfooter = document.createElement('tr')
+   
+
+   footer();
+   
+   
 }
 
