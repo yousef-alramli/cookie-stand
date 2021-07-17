@@ -4,18 +4,23 @@ height: 30px;
 width: 50px;
 padding-left: 10px;
 margin-top: 10px;
+padding-bottom: 10px;
+font-family:Arial, Helvetica, sans-serif;
 
 
 }
 
+
 #a:hover *,#a:hover{
 background-color: gold;
 color: rgb(0, 0, 66) ;
+
 }
 
 a{
     text-decoration: none;
 color: gold;
+
 }
 
 body{
@@ -23,4 +28,14 @@ body{
 background-color: black;
 color: blanchedalmond;
 font-style: initial;
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: lightskyblue;
+}
+section:nth-child(2) *{
+    font-family: 'Fuggles', cursive;
+    font-size: 35px;
+    font-weight:530;
 }
